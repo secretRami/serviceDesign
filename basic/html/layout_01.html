@@ -9,18 +9,27 @@
     *{margin:0; padding:0; border:0;}
 
     body{background-color:#aaa; margin:0;}
+
     #box{width:600px; height:auto; margin:0 auto;}
       .out_box{width:inherit; height:100px;}
+
+    /* header의 영역입니다.  */
       #headBox{background-color:#f0a;}
+        h1{width:20%; height:inherit; float:left; background-color:#6af;}
+        nav{width:70%; height:50%; float:right; background-color:#4a7;}
+
+    /* section의 영역입니다. */
       #contentBox{height:auto;}
         #sideBox{width:30%; height:300px; float:right; background-color:#ccc;}
-        #dataBox{width:70%; height:150px; float:left; background-color:#aa3;}
-        #dataBox2{width:70%; height:150px; float:left; background-color:#faf;}
+        #dataBox{width:70%; height:150px; float:left; background-color:#bb3;}
+        #dataBox2{width:70%; height:150px; float:left; background-color:#ddf;}
 
         /*clearfix::after사용*/
         .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;} 
 
+    /* footer의 영역입니다. */
       #footBox{background-color:#0af;}
+
 
 
   </style>
@@ -29,15 +38,20 @@
 </head>
 <body>
   <div id="box">
+  <!-- header의 영역입니다.  -->
     <header id="headBox" class="out_box">
-      headBox
+      <h1>h1이오!</h1>
+      <nav id="gnb">navigation</nav> 
     </header><!-- // #headBox 마지막 줄 -->
+
+  <!-- header의 영역입니다.  -->
     <section id="contentBox" class="out_box clearfix">
       <aside id="sideBox">sideBox</aside><!-- // #sideBox-->
       <article id="dataBox">dataBox</article><!-- // #dataBox-->
       <article id="dataBox2">dataBox2</article><!-- // #dataBox2-->
-
     </section><!-- // #contentBox 마지막 줄 -->
+
+  <!-- header의 영역입니다.  -->
     <footer id="footBox" class="out_box">
       footBox
     </footer><!-- // #footBox 마지막 줄 -->
