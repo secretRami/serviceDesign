@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+    <!-- meta:compat -->
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <title>Document</title>
+  <style>
+    /* 1. 
+    * style 주석은 이렇게 사용합니다. 
+  
+    * css에 style을 입힐 때에는
+      `태그명`에 그냥 사용햘땐    태그명{}
+      `id`에 사용할땐          #아이디명{},
+      `class`에 사용할땐       .클래스{},
+      `div#box`로 div태그에 id값이 box인 것을 지정해 스타일을 지정할 수 있다. 
+
+    * css는 속성의 기능에 속성명:속성값;으로 표기한다.
+
+    * width는 값을 auto로 넣지 않는다. 
+    * height는 값을 auto로 넣을 수 있다.
+    
+    * margin
+      margin:50px 50px; > 위/아래 50px만큼씩 떨어뜨린다. 좌/우는 자동(가운데배치)
+    */
+
+    /* 2.
+    `*`의 뜻은 전체라는 의미. 실제로 많이 사용하는 것은 지양한다.*/
+    *{margin:0; padding:0; border:0;
+      /*--fontColor:#fff;*/}
+
+    body{background-color:#aaa; margin:0;}
+    #box{width:600px; height:auto; margin:0 auto;}
+      /* 3. 
+      여러 번 사용되는 속성값은 class로 한번에 적용시키고, 
+      여러개의 id값을 따로 만들어서, 각자의 속성:속성값을 부여한다.
+
+      중복되는 요소에 같은 속성에 속성값을 줄 때, 
+      먼저 쓴것과 나중에 쓴 속성값중 나중에 쓴 속성값을 따른다. 
+
+      우선순위
+      할배태그의 위치 > id > class > element
+
+      ex/ 
+      <body>
+        <header id="headBox" class="test_class">
+          <div>태그의 우선순위</div>
+        </header>
+      </body>
+
+      위의 상황일 때, 
+      body > #headBox > .test_class > div으로 우선순위가 정해진다. 
+
+      */
+      .out_box{width:inherit; height:100px;}
+      #headBox{background-color:#f0a;}
+      #contentBox{height:300px; background-color:#fa0; /*color:var(--fontColor);*/}
+        #sideBox{width:40%; height:inherit; background-color:#ccc;}
+        #dataBox{width:60%; height:inherit; background-color:#333;}
+/*얼라인먼트를 이용해 줄맞춤 하기 control + amd + a*/
+      #footBox{background-color:#0af;}
+      /* 4.
+      아직 사용하지는 못하지만, 일단 알아놓고 있자. 
+      * css에서 변수(var) 사용하기 
+
+        --변수명:값;
+        사용속성:var(--변수명);
+  
+        ex/
+        --fontColor:#fff;
+        color:var(--fontColor);
+      */
+
+  </style>
+  <script>
+    // script 한 줄 주석은 이렇게 사용합니다. 
+    /* script
+        여러줄 주석은 이렇게 
+        사용합니다. */
+  </script>
+</head>
+<body>
+  <!-- !+ tab html기본코드-->
+  <div id="box">
+    <header id="headBox" class="out_box">
+      headBox
+    </header><!-- // #headBox 마지막 줄 -->
+    <section id="contentBox" class="out_box">
+      <aside id="sideBox">sideBox</aside><!-- // #sideBox-->
+      <article id="dataBox">dataBox</article><!-- // #dataBox-->
+    </section><!-- // #contentBox 마지막 줄 -->
+    <footer id="footBox" class="out_box">
+      footBox
+    </footer><!-- // #footBox 마지막 줄 -->
+  </div><!-- // #box -->
+</body>
+</html>
