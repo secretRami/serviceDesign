@@ -13,59 +13,14 @@
       .out_box{width:inherit; height:100px;}
       #headBox{background-color:#f0a;}
       #contentBox{height:auto;}
-        #sideBox{
-          width:-webkit-calc(100% / 3); /* webkit: chrome, safari, swing */
-          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
-          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */ 
-          width:-o-calc(100% / 3); /* o : opera */
-          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
-          height:300px; float:left; background-color:#ccc;}
-        #dataBox{
-          width:-webkit-calc(100% / 3); /* webkit: chrome, safari, swing */
-          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
-          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */ 
-          width:-o-calc(100% / 3); /* o : opera */
-          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
-          height:300px; float:left; background-color:#aa3;}
-        #dataBox2{
-          width:-webkit-calc(100% / 3); /* webkit: chrome, safari, swing */
-          width:-moz-calc(100% / 3); /* moz: mozilla(fire fox) */
-          width:-ms-calc(100% / 3); /* ms: microsoft(IE, edge) */ 
-          width:-o-calc(100% / 3); /* o : opera */
-          width:calc(100% / 3); /* 표준(미래에 표준으로 등재시 사용) */
-          height:300px; float:left; background-color:#faf;}
-
-        /* 
-        * 크기값 계산하기: 3등분의 경우 소수점의 크기값을 계산해야 하므로,
-            소수점 6자리까지 계산하여 사용합니다. (%, em, rem... but! px수치 제외)
-
-        * css3의 최신기능에는 수치를 자동으로 계산하는 속성이 있다.
-            calc(): calc()는 ()안에 원하는 수치와 사칙연산 그리고, 계산 내용을 작성한다. 
-            이 때, 연산기호(*, /, +, -, %)앞, 뒤에는 공백을 만들어 주어야 계산이 된다. 
-
-        * 기술은 구현되지만 표준으로 등록되지 않으면 사용할 수 없다
-          이러한 경우에 미래에 사용할 수 있는 기능을 강제로 끌어서 쓸 수 있다.(밴더프리픽스) 
-          
-        * 밴더프리픽스: 앞, 뒤에 밴더(-)를 달고, 해당하는 브라우저의 방식 작성하여 구현
-          차후 표준으로 등재(권고)시 밴더프리픽스의 기능은 삭제
-        */
-
-
-        /* div.clearfix의 처리 */
-        /*.clearfix{width:100%; clear:both;}*/
-
-        /* br.clearfix의 처리 */
-        /*.clearfix{clear:both;}*/
+        #sideBox{width:30%; height:300px; float:left; background-color:#ccc;}
+        #dataBox{width:70%; height:150px; float:left; background-color:#aa3;}
+        #dataBox2{width:70%; height:150px; float:left; background-color:#faf;}
 
         /*clearfix::after사용*/
         .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;} 
 
       #footBox{background-color:#0af;}
-
-      /* clearfix는 관용적인 용어이다.  
-
-      clear:both 는 
-      clear는 float 기능을 상쇄시켜서 형제 요소들이 공중에 떠 있어도 ...얘 왜 적다말았니 ㅠㅠ*/
 
 
   </style>
@@ -81,18 +36,6 @@
       <aside id="sideBox">sideBox</aside><!-- // #sideBox-->
       <article id="dataBox">dataBox</article><!-- // #dataBox-->
       <article id="dataBox2">dataBox2</article><!-- // #dataBox2-->
-<!-- .clearfix의 이해 
-* div코드로 눈에 보이게 만들어 사용
-* br태그로 변형시켜 사용
-* 가상 선택자(:after) 사용 -->
-
-      <!-- 해결방안 1. div.clearfix를 사용 -->
-      <!-- <div class="clearfix"></div> -->
-
-      <!-- 해결방안 2. br.clearfix를 사용 -->
-      <!-- <br class="clearfix" /> -->
-
-      <!-- 해결방안 3. 가상선택자 ::after를 사용(부모에 class="clearfix" 삽입) -->
 
     </section><!-- // #contentBox 마지막 줄 -->
     <footer id="footBox" class="out_box">
