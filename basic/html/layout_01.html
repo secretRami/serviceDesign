@@ -6,81 +6,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <title>Document</title>
   <style>
-    /* 1. 
-    * style 주석은 이렇게 사용합니다. 
-  
-    * css에 style을 입힐 때에는
-      `태그명`에 그냥 사용햘땐    태그명{}
-      `id`에 사용할땐          #아이디명{},
-      `class`에 사용할땐       .클래스{},
-      `div#box`로 div태그에 id값이 box인 것을 지정해 스타일을 지정할 수 있다. 
-
-    * css는 속성의 기능에 속성명:속성값;으로 표기한다.
-
-    * width는 값을 auto로 넣지 않는다. 
-    * height는 값을 auto로 넣을 수 있다.
-    
-    * margin
-      margin:50px 50px; > 위/아래 50px만큼씩 떨어뜨린다. 좌/우는 자동(가운데배치)
-    */
-
-    /* 2.
-    `*`의 뜻은 전체라는 의미. 실제로 많이 사용하는 것은 지양한다.*/
-    *{margin:0; padding:0; border:0;
-      /*--fontColor:#fff;*/}
+    *{margin:0; padding:0; border:0;}
 
     body{background-color:#aaa; margin:0;}
     #box{width:600px; height:auto; margin:0 auto;}
-      /* 3. 
-      여러 번 사용되는 속성값은 class로 한번에 적용시키고, 
-      여러개의 id값을 따로 만들어서, 각자의 속성:속성값을 부여한다.
-
-      중복되는 요소에 같은 속성에 속성값을 줄 때, 
-      먼저 쓴것과 나중에 쓴 속성값중 나중에 쓴 속성값을 따른다. 
-
-      우선순위
-      할배태그의 위치 > id > class > element
-
-      ex/ 
-      <body>
-        <header id="headBox" class="test_class">
-          <div>태그의 우선순위</div>
-        </header>
-      </body>
-
-      위의 상황일 때, 
-      body > #headBox > .test_class > div으로 우선순위가 정해진다. 
-
-      */
       .out_box{width:inherit; height:100px;}
       #headBox{background-color:#f0a;}
-      #contentBox{height:300px; background-color:#fa0; /*color:var(--fontColor);*/}
-        #sideBox{width:40%; height:inherit; background-color:#ccc;}
-        #dataBox{width:60%; height:inherit; background-color:#333;}
-/*얼라인먼트를 이용해 줄맞춤 하기 control + amd + a*/
-      #footBox{background-color:#0af;}
-      /* 4.
-      아직 사용하지는 못하지만, 일단 알아놓고 있자. 
-      * css에서 변수(var) 사용하기 
+      #contentBox{height:auto;}
+        #sideBox{width:40%; height:300px; float:left; background-color:#ccc;}
+        #dataBox{width:40%; height:300px; float:left; background-color:#333;}
+        #dataBox2{width:20%; height:300px; float:left; background-color:#faf;}
+        /* float은, 
+        하나의 요소에만 적용시키는게 아니라, 형제 요소에도 다 같이 적용시켜준다(맞춰줘야 하기 때문에).
+        공중에 띄운 상태에서 밀어서 공간을 나열시킨다. 부모의 공간이 부족하면 아래로 내려간다. 
 
-        --변수명:값;
-        사용속성:var(--변수명);
-  
-        ex/
-        --fontColor:#fff;
-        color:var(--fontColor);
-      */
+        부모가 자식 요소의 height를 따르는 경우에(auto;), 자식에 float을 쓰면 공중에 떠있어서 높이를 가지지 못하고 짜부라진다. 이런 문제를 해결하기 위해 clearfix를 사용한다. */
+
+        /*
+        지금 상황은 블록 요소를 나열하기 위해 float을 사용하는데, 
+        왼쪽을 기준으로 나열하기 위해 float:left
+        오른쪽을 기준으로 나열하기 위해 float:right
+
+        문제 1. 부모 요소에 높이값을 설정하면 넘어가는 사이즈를 매번 변경 ㅠ
+        문제 2. 부모요소에 높이값을 auto로 설정하면 부모가 높이값을 가지지 못함(짜부라든다ㅠ)
+
+        해결하기위한 방법 1. clear속성을 사용
+        해결하기위한 방법 2. 정의된 이름은 아니지만 보편적으로 .clearfix의 기법
+        해결하기위한 방법 3. css의 추가 기능(선택자의 기능) ::before , ::after
+        */
+
+      #footBox{background-color:#0af;}
+
+
+/* 다음의 css연구소를 근거로 속성값을 적을 때  
+    width height float(공간값, 레이아웃) margin padding 백그라운드 순으로 적고, 
+    나중에 백그라운드는 지워준다. */
+/* 얼라인먼트를 이용해 줄맞춤:  control + amd + a*/
+/* line copy:            shift cmd d 는 */
 
   </style>
   <script>
-    // script 한 줄 주석은 이렇게 사용합니다. 
-    /* script
-        여러줄 주석은 이렇게 
-        사용합니다. */
   </script>
 </head>
 <body>
-  <!-- !+ tab html기본코드-->
   <div id="box">
     <header id="headBox" class="out_box">
       headBox
@@ -88,6 +56,7 @@
     <section id="contentBox" class="out_box">
       <aside id="sideBox">sideBox</aside><!-- // #sideBox-->
       <article id="dataBox">dataBox</article><!-- // #dataBox-->
+      <article id="dataBox2">dataBox2</article><!-- // #dataBox2-->
     </section><!-- // #contentBox 마지막 줄 -->
     <footer id="footBox" class="out_box">
       footBox
