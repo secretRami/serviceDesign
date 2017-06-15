@@ -13,36 +13,25 @@
       .out_box{width:inherit; height:100px;}
       #headBox{background-color:#f0a;}
       #contentBox{height:auto;}
-        #sideBox{width:40%; height:300px; float:left; background-color:#ccc;}
-        #dataBox{width:40%; height:300px; float:left; background-color:#333;}
-        #dataBox2{width:20%; height:300px; float:left; background-color:#faf;}
-        /* float은, 
-        하나의 요소에만 적용시키는게 아니라, 형제 요소에도 다 같이 적용시켜준다(맞춰줘야 하기 때문에).
-        공중에 띄운 상태에서 밀어서 공간을 나열시킨다. 부모의 공간이 부족하면 아래로 내려간다. 
+        #sideBox{width:33.333333%; height:300px; float:left; background-color:#ccc;}
+        #dataBox{width:33.333334%; height:300px; float:left; background-color:#aa3;}
+        #dataBox2{width:33.333333%; height:300px; float:left; background-color:#faf;}
+        /* div.clearfix의 처리 */
+        /*.clearfix{width:100%; clear:both;}*/
 
-        부모가 자식 요소의 height를 따르는 경우에(auto;), 자식에 float을 쓰면 공중에 떠있어서 높이를 가지지 못하고 짜부라진다. 이런 문제를 해결하기 위해 clearfix를 사용한다. */
+        /* br.clearfix의 처리 */
+        /*.clearfix{clear:both;}*/
 
-        /*
-        지금 상황은 블록 요소를 나열하기 위해 float을 사용하는데, 
-        왼쪽을 기준으로 나열하기 위해 float:left
-        오른쪽을 기준으로 나열하기 위해 float:right
-
-        문제 1. 부모 요소에 높이값을 설정하면 넘어가는 사이즈를 매번 변경 ㅠ
-        문제 2. 부모요소에 높이값을 auto로 설정하면 부모가 높이값을 가지지 못함(짜부라든다ㅠ)
-
-        해결하기위한 방법 1. clear속성을 사용
-        해결하기위한 방법 2. 정의된 이름은 아니지만 보편적으로 .clearfix의 기법
-        해결하기위한 방법 3. css의 추가 기능(선택자의 기능) ::before , ::after
-        */
+        /*clearfix::after사용*/
+        .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;} 
 
       #footBox{background-color:#0af;}
 
+      /* clearfix는 관용적인 용어이다.  
 
-/* 다음의 css연구소를 근거로 속성값을 적을 때  
-    width height float(공간값, 레이아웃) margin padding 백그라운드 순으로 적고, 
-    나중에 백그라운드는 지워준다. */
-/* 얼라인먼트를 이용해 줄맞춤:  control + amd + a*/
-/* line copy:            shift cmd d 는 */
+      clear:both 는 
+      clear는 float 기능을 상쇄시켜서 형제 요소들이 공중에 떠 있어도 */
+
 
   </style>
   <script>
@@ -53,10 +42,23 @@
     <header id="headBox" class="out_box">
       headBox
     </header><!-- // #headBox 마지막 줄 -->
-    <section id="contentBox" class="out_box">
+    <section id="contentBox" class="out_box clearfix">
       <aside id="sideBox">sideBox</aside><!-- // #sideBox-->
       <article id="dataBox">dataBox</article><!-- // #dataBox-->
       <article id="dataBox2">dataBox2</article><!-- // #dataBox2-->
+<!-- .clearfix의 이해 
+* div코드로 눈에 보이게 만들어 사용
+* br태그로 변형시켜 사용
+* 가상 선택자(:after) 사용 -->
+
+      <!-- 해결방안 1. div.clearfix를 사용 -->
+      <!-- <div class="clearfix"></div> -->
+
+      <!-- 해결방안 2. br.clearfix를 사용 -->
+      <!-- <br class="clearfix" /> -->
+
+      <!-- 해결방안 3. 가상선택자 ::after를 사용(부모에 class="clearfix" 삽입) -->
+
     </section><!-- // #contentBox 마지막 줄 -->
     <footer id="footBox" class="out_box">
       footBox
