@@ -1,71 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/src/layout_03.css" />
+  <!-- 
+    css파일을 가져오는 방법 두번째 'link'  
+    link를 먼저쓰고, script를 적는다. 
+    link를 
+   -->
+
   <!--[if lte IE 9]>
   <script src="../ie/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
-  <style>
-/* reset */
-    html,body{width:100%; height:100%;}
-    html,body, h1,h2,h3,h4,h5,h6,
-    ul,ol,li,dl,dt,dd
-    p,div,pre,form,fieldset,hr{margin:0; padding:0;}
-
-    ul,ol,li{list-style:none;}
-    .first_li{margin-left:0%;}
-
-    /* html5reset */
-    header,nav,aside,article,section,footer,main,figure{
-      display:block; margin:0; padding:0; }
-
-    /* normalize : 
-      일반적으로 자주사용하는 기법을 등록해서 필요에 따라 바로 사용할 수 있도록 처리(단축키 개념) */
-    .cf:after, .clearfix:after{content:" "; display:block; width:0; height:0; clear:both;}
-    .hidden{display:block; width:0; height:0; overflow:hidden;}
-    #wrap .first_li{margin-left:0;}
-    
-/* ============================================================ */
-/* Design */
-    #wrap{width:960px; height:740px; background-color:#aaa; margin:0 auto;}
-    /* #headBox ________________________________ */
-    #headBox{width:100%; height:140px; background-color:#2a7;
-      padding:20px 30px 0; box-sizing:border-box;}
-      h1{width:150px; height:60px; float:left; background-color:#f06; margin-bottom:20px;}
-            
-      /* #unb ________________________________ */            
-      #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5);}
-        /*#unb>h2{width:0; height:0; overflow:hidden;}*/
-        #unb>ul{width:100%; height:100%;}
-          #unb>ul>li{width:24%; height:100%; float:left; background-color:#ea3; margin-left:1.3%;}
-
-      /* #gnb ________________________________ */
-      #gnb{width:960px; height:40px; float:left; background-color:#a9f; margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
-        /*#gnb>h2{width:0;height:0; overflow:hidden;}*/
-        /*  h2는 두개 다 hidden으로 안보이게 설정이니까 
-        normalize에 설정해놓은 class를 사용한다. */
-        #gnb>ul{width:100%; height:100%;}
-          #gnb>ul>li{width:12%; height:100%; float:left; background-color:#eee; margin-left:0.57%;}
-          /*#gnb>ul>li.first_li{margin-left:0%;}*/
-
-          /* li의 간격을 정렬시킬 때, 
-          * 각각의 li에 margin-left설정.
-            list 8개 == 100%/8 이 중, 사이 간격은 7개만큼 띄워야함.
-            4%/7-> 12*8=96 이기 때문에 남은 4%에서7을 나눔 
-          * 처음 li에는 margin-left를 적용할 필요가 없으므로, 별도의  class를 만들어주고, margin-left:0;으로 처리함(normalize로 처리해서 사용함. )
-
-          */
-
-    /* #contentBox ________________________________ */
-    #contentBox{width:100%; height:520px; background-color:#1af;
-    }
-    /* #footBox ________________________________ */
-    #footBox{width:100%; height:80px; background-color:#3a3;}
-
-  </style>
 
   <title>layout sample3</title>
+  <style>
+    /* 
+    @import url("../css/base/reset.css");
+    @import url("../css/base/normalize.css");
+    @import url("../css/src/layout_03.css"); */
+    /* css파일을 가져오는 방법 첫번째 'import'
+        IE하위버전은 사용 불가능.
+        파일을 하나씩 불러오므로, 속도가 느리다. */
+  </style>
 </head>
 <body>
   <div id="wrap">
