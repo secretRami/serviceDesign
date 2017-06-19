@@ -10,7 +10,11 @@
 /* reset */
     html,body{width:100%; height:100%;}
     html,body, h1,h2,h3,h4,h5,h6,
+    ul,ol,li,dl,dt,dd
     p,div,pre,form,fieldset,hr{margin:0; padding:0;}
+
+    ul,ol,li{list-style:none;}
+    .first_li{margin-left:0%;}
 
     /* html5reset */
     header,nav,aside,article,section,footer,main,figure{
@@ -20,57 +24,36 @@
       일반적으로 자주사용하는 기법을 등록해서 필요에 따라 바로 사용할 수 있도록 처리(단축키 개념) */
     .cf:after, .clearfix:after{content:" "; display:block; width:0; height:0; clear:both;}
     .hidden{display:block; width:0; height:0; overflow:hidden;}
-
+    #wrap .first_li{margin-left:0;}
+/* ============================================================ */
 /* Design */
     #wrap{width:960px; height:740px; background-color:#aaa; margin:0 auto;}
     /* #headBox ________________________________ */
     #headBox{width:100%; height:140px; background-color:#2a7;
       padding:20px 30px 0; box-sizing:border-box;}
-      h1{width:150px; height:60px; float:left; background-color:#f06; margin-bottom:20px;
-        /*margin-top:20px; margin-left:30px;*/}
-      #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5); 
-        /*margin-top:20px;margin-right:30px;*/}
+      h1{width:150px; height:60px; float:left; background-color:#f06; margin-bottom:20px;}
+            
+      /* #unb ________________________________ */            
+      #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5);}
+        /*#unb>h2{width:0; height:0; overflow:hidden;}*/
 
-      /* 2. 
-      margin과 padding을 이용해 공간을 띄우는 방법들
-      * 자식 요소에 사용 _margin
-        모든 요소 하나 하나에 매번 직접적으로 margin값을 설정해줘야해서 불편함. 
-
-      * 부모 요소에 사용 _padding
-       자식 요소의 공통영역을 한꺼번에 처리할 수 있어서 전체 코드의 양이 줄고, 통일성을 잡을 수 있다. 
-       padding은 안쪽으로 영역을 잡는 게 아니라 바깥으로 부피가 커지므로,
-       원래 요소의 크기를 padding만큼 조절해줘야 한다. 
-
-      * padding or border를 사용할 때, 요소의 크기를 줄여줘야 하는 경우에 
-        (padding-top:20px을 사용하고 전체 높이를 20px만큼 줄여야 한다면)
-      * box-sizing:border-box;속성을 사용해서 전체 크기를 줄이지 않아도 된다. 
-      * box-sizing은 padding, border에 대한 선의 위치를 설정하는 속성
-        속성 2가지 : content-box(지정 상자의 바깥쪽)| border-box(지정 상자의 안쪽)
-      tip _
-        margin은 마이너스 값과, auto가 적용되지만, 
-        padding은 적용되지 않는다. 
-      */
-      #unb>h2{width:0; height:0; overflow:hidden;}
-      /* 1. 
-      안보이게 처리하는 속성들 
-      * visibility:hidden;
-          영역도 안잡히고 스크린리더가 읽지 않는다.
-          (얘는 사이즈가 있다. 공간은 차지한다.)
-      * display:none;
-          영역도 안잡히고 스크린리더가 읽지 않는다.
-          (존재가 없는 것으로 인지한다. 공간이 null값을 가진다.)
-
-      * overflow: hidden; 
-          일정한 크기의 값을 가진 태그에 내용이 넘쳤을 경우 처리하는 속성기법
-          (공간도 있고, 넘쳐서 안보이는 부분도 스크린 리더가 다 읽어준다.)
-        - overflow종류: 
-            overflow; overflow-x(가로영역) overflow-y(세로영역)
-        - overflow속성: normal, auto, scroll, hidden
-       */
       /* #gnb ________________________________ */
-      #gnb{width:100%; height:40px; float:left; background-color:#a9f;}
+      #gnb{width:960px; height:40px; float:left; background-color:#a9f; margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
+        /*#gnb>h2{width:0;height:0; overflow:hidden;}*/
+
+        #gnb>ul{width:100%; height:100%;}
+          #gnb>ul>li{width:12%; height:100%; float:left; background-color:#eee; margin-left:0.57%;}
+          #gnb>ul>li.first_li{margin-left:0%;}
+          /* li의 간격을 정렬시킬 때, 
+          * 각각의 li에 margin-left설정.
+            list 8개 == 100%/8 이 중, 사이 간격은 7개만큼 띄워야함.
+            4%/7-> 12*8=96 이기 때문에 남은 4%에서7을 나눔 
+          * 처음 li에는 margin-left를 적용할 필요가 없으므로, 별도의 class를 만들어주고, margin-left:0;으로 처리함. 
+          */
+
     /* #contentBox ________________________________ */
-    #contentBox{width:100%; height:520px; background-color:#1af;}
+    #contentBox{width:100%; height:520px; background-color:#1af;
+    }
     /* #footBox ________________________________ */
     #footBox{width:100%; height:80px; background-color:#3a3;}
 
@@ -83,9 +66,21 @@
     <header id="headBox">
       <h1>logo</h1>
       <nav id="unb">
-        <h2>utility navigation</h2>
+        <h2 class="hidden">utility navigation</h2>
       </nav>
-      <nav id="gnb">gnb</nav><!-- // #gnb -->
+      <nav id="gnb" class="clearfix">
+        <h2 class="hidden">global navigation</h2>
+        <ul>
+          <li class="first_li">navi_01</li>
+          <li>navi_02</li>
+          <li>navi_03</li>
+          <li>navi_04</li>
+          <li>navi_05</li>
+          <li>navi_06</li>
+          <li>navi_07</li>
+          <li>navi_08</li>
+        </ul>
+      </nav><!-- // #gnb -->
     </header><!-- // #header -->
     <section id="contentBox">section</section><!-- // #contentBox -->
     <footer id="footBox">footBox</footer><!-- // #footBox -->
