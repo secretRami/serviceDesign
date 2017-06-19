@@ -25,6 +25,7 @@
     .cf:after, .clearfix:after{content:" "; display:block; width:0; height:0; clear:both;}
     .hidden{display:block; width:0; height:0; overflow:hidden;}
     #wrap .first_li{margin-left:0;}
+    
 /* ============================================================ */
 /* Design */
     #wrap{width:960px; height:740px; background-color:#aaa; margin:0 auto;}
@@ -36,20 +37,24 @@
       /* #unb ________________________________ */            
       #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5);}
         /*#unb>h2{width:0; height:0; overflow:hidden;}*/
+        #unb>ul{width:100%; height:100%;}
+          #unb>ul>li{width:24%; height:100%; float:left; background-color:#ea3; margin-left:1.3%;}
 
       /* #gnb ________________________________ */
       #gnb{width:960px; height:40px; float:left; background-color:#a9f; margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
         /*#gnb>h2{width:0;height:0; overflow:hidden;}*/
         /*  h2는 두개 다 hidden으로 안보이게 설정이니까 
-        nomalize에 설정해놓은 class를 사용한다. */
+        normalize에 설정해놓은 class를 사용한다. */
         #gnb>ul{width:100%; height:100%;}
           #gnb>ul>li{width:12%; height:100%; float:left; background-color:#eee; margin-left:0.57%;}
-          #gnb>ul>li.first_li{margin-left:0%;}
+          /*#gnb>ul>li.first_li{margin-left:0%;}*/
+
           /* li의 간격을 정렬시킬 때, 
           * 각각의 li에 margin-left설정.
             list 8개 == 100%/8 이 중, 사이 간격은 7개만큼 띄워야함.
             4%/7-> 12*8=96 이기 때문에 남은 4%에서7을 나눔 
-          * 처음 li에는 margin-left를 적용할 필요가 없으므로, 별도의 class를 만들어주고, margin-left:0;으로 처리함. 
+          * 처음 li에는 margin-left를 적용할 필요가 없으므로, 별도의  class를 만들어주고, margin-left:0;으로 처리함(normalize로 처리해서 사용함. )
+
           */
 
     /* #contentBox ________________________________ */
@@ -68,6 +73,12 @@
       <h1>logo</h1>
       <nav id="unb">
         <h2 class="hidden">utility navigation</h2>
+        <ul>
+          <li class="first_li">list_01</li>
+          <li>list_02</li>
+          <li>list_03</li>
+          <li>list_04</li>
+        </ul>
       </nav>
       <nav id="gnb" class="clearfix">
         <h2 class="hidden">global navigation</h2>
