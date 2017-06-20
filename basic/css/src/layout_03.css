@@ -11,30 +11,67 @@
         
   /* #unb ________________________________ */            
   #unb{width:500px; height:50px; float:right; background-color:rgba(250,250,250,0.5);}
-    /*#unb>h2{width:0; height:0; overflow:hidden;}*/
     #unb>ul{width:100%; height:100%;}
       #unb>ul>li{width:24%; height:100%; float:left; background-color:#ea3; margin-left:1.3%;}
 
   /* #gnb ________________________________ */
   #gnb{width:960px; height:40px; float:left; background-color:#a9f; margin-left:-30px; padding:5px 30px; box-sizing:border-box;}
-    /*#gnb>h2{width:0;height:0; overflow:hidden;}*/
-    /*  h2는 두개 다 hidden으로 안보이게 설정이니까 
-    normalize에 설정해놓은 class를 사용한다. */
     #gnb>ul{width:100%; height:100%;}
       #gnb>ul>li{width:12%; height:100%; float:left; background-color:#eee; margin-left:0.57%;}
-      /*#gnb>ul>li.first_li{margin-left:0%;}*/
-
       /* li의 간격을 정렬시킬 때, 
       * 각각의 li에 margin-left설정.
         list 8개 == 100%/8 이 중, 사이 간격은 7개만큼 띄워야함.
         4%/7-> 12*8=96 이기 때문에 남은 4%에서7을 나눔 
-      * 처음 li에는 margin-left를 적용할 필요가 없으므로, 별도의  class를 만들어주고, margin-left:0;으로 처리함(normalize로 처리해서 사용함. )
-
+      * 처음 li에는 margin-left를 적용할 필요가 없으므로, 
+        별도의  class를 만들어주고, margin-left:0;으로 처리함(normalize로 처리해서 사용함. )
       */
-
 /* #contentBox ________________________________ */
-#contentBox{width:100%; height:520px; background-color:#1af;
-}
-/* #footBox ________________________________ */
-#footBox{width:100%; height:80px; background-color:#3a3;}
+#contentBox{width:100%; height:520px; background-color:#1af;}
 
+  .log_in{width:30%; height:50%; padding:10px 10px; box-sizing:border-box; float:left; background-color:#111;}
+  .log_in>ul{width:100%; height:100%; background-color:rgba(255,255,255,0.7);}
+  .log_in>ul>li{width:65%; height:76px; float:left; margin-bottom:5px; background-color:#2a9;}
+  .log_in>ul>li.login_vertical{width:25%; height:100%; float:right; 
+    background-color:#2a9; margin-top:-162px;}
+    /* log_in 버튼을 차례대로 나열하면 필연적으로 맨 아래에 위치하는 세로 로그인 요소를
+    강제로 끌어올리기 위해 margin-top:안에 -마이너스 수치를 넣어준다. */
+  
+
+
+  .banner_box{width:70%; height:50%; float:left; padding:10px 10px; box-sizing:border-box; background-color:#dea;}
+    .banner_div_01{width:100%; height:60%; margin-bottom: 10px; background-color:#aeb;}
+    .banner_div_02{width:100%; height:35%; background-color:#bae;}
+
+  .news_box{width:100%; height:50%; float:left; padding:10px 10px; box-sizing:border-box; background-color:#e2a;}
+    .news_box>ul{width:100%; height:100%;}
+    /* news_box안의 객체를 하나씩 띄엄띄엄 해주려면 margin값을 계산해서 하나하나 적용해줘야 하는데 그러면 너무 귀찮, 힘들.
+     그래서 다른 방법을 생각해야 함. 방법 2가지를 배움. */
+
+    /*margin을 사용하지 않고 간격을 띄우는 방법 첫번째 방법 padding을 사용하고,
+    객체가 커지지 않게 box-sizing을 사용해주고, */
+    .news_box>ul>li{width:25%; height:100%; float:left; padding:5px; box-sizing:border-box; background-color:#fff;}
+
+     /*margin을 사용하지 않고 간격을 띄우는 방법 두번째 방법*/
+    /*.news_box>ul>             li{width:25%; height:100%; float:left; border:10px solid transparent; box-sizing:border-box; background-color:#fff;}
+    .news_box>ul div{width:100%; height:100%; background-color:#9ee;} */
+    
+    .news_01{background-color:#f01;}
+    .news_02{background-color:#f61;}
+    .news_03{background-color:#f91;}
+    .news_04{background-color:#fa1;}
+    .news_box>ul div{width:100%; height:100%;}
+
+
+/* #footBox ________________________________ */
+#footBox{width:100%; height:80px; padding:15px 20px; box-sizing:border-box; background-color:#3a3;}
+  #footBox>h2{width:20%; height:80%; float:left; background-color:#aaa;}
+  address{width:40%; height:80%; float:left; margin-left:40px; margin-right:40px; background-color:#a39;}
+  .family{width:30%; height:80%; float:left; background-color:#eaf;}
+
+/* 
+  * float 사용시 margin: float이 적용된 상태에서 margin을 사용하면 큰 쪽이 적용되는 게 아니라, 양쪽 다 적용된다. 
+   
+  * box-sizing:  기본이 content-box
+    border-box를 사용하면 padding은 개체의 내부로 생성이 된다. ()
+    border또한, border를 사용하면 내부로 생성이 된다.
+*/

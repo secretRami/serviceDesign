@@ -8,7 +8,7 @@ ul,ol,li,dl,dt,dd
 p,div,pre,form,fieldset,hr{margin:0; padding:0;}
 
 ul,ol,li{list-style:none;}
-.first_li{margin-left:0%;}
+
 
 /* html5reset */
 header,nav,aside,article,section,footer,main,figure{

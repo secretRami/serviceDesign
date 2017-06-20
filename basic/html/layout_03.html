@@ -17,15 +17,6 @@
   <![endif]-->
 
   <title>layout sample3</title>
-  <style>
-    /* 
-    @import url("../css/base/reset.css");
-    @import url("../css/base/normalize.css");
-    @import url("../css/src/layout_03.css"); */
-    /* css파일을 가져오는 방법 첫번째 'import'
-        IE하위버전은 사용 불가능.
-        파일을 하나씩 불러오므로, 속도가 느리다. */
-  </style>
 </head>
 <body>
   <div id="wrap">
@@ -39,7 +30,7 @@
           <li>list_03</li>
           <li>list_04</li>
         </ul>
-      </nav>
+      </nav><!-- // #unb -->
       <nav id="gnb" class="clearfix">
         <h2 class="hidden">global navigation</h2>
         <ul>
@@ -54,9 +45,53 @@
         </ul>
       </nav><!-- // #gnb -->
     </header><!-- // #header -->
-    <section id="contentBox">section</section><!-- // #contentBox -->
-    <footer id="footBox">footBox</footer><!-- // #footBox -->
+
+    <section id="contentBox" class="clearfix">
+    <div class="log_in">
+        <h3 class="hidden">log_in</h3>
+        <ul>
+          <li>log_in_01</li>
+          <li>log_in_02</li>
+          <li>log_in_03</li>
+          <li class="login_vertical">log_in_04</li>
+        </ul>
+      </div><!-- // #log_in -->
+
+      <div class="banner_box">
+        <h3 class="hidden">banner_box</h3>
+        <div class="banner_div_01">01</div>
+        <div class="banner_div_02">02</div>
+      </div><!-- // #banner_box -->
+
+      <div class="news_box">
+        <h3 class="hidden">news</h3>
+        <ul>
+          <li><div class="news_01">news_01</div></li>
+          <li><div class="news_02">news_02</div></li>
+          <li><div class="news_03">news_03</div></li>
+          <li><div class="news_04">news_04</div></li>
+        </ul>
+      </div><!-- // #news_box -->
+    </section><!-- // #contentBox -->
+    
+    <footer id="footBox" class="clearfix">
+      <h2 class="sub-logo">sub_logo</h2>
+      <address>두둥!</address>
+      <div class="family">family</div>
+    </footer><!-- // #footBox -->
   </div><!-- // #wrap -->
   
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
