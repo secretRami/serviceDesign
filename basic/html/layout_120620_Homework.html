@@ -16,7 +16,7 @@
     html,body,div,
     ul,ol,li,dl,dt,dd,
     table,thead,tbody,tfoot,
-    form,fieldset,p,pre,hr{margin:0; padding:0;}
+    form,fieldset,p,pre,hr{margin:0; padding:0; border:0;}
 
     h1,h2,h3,h4,h5,h6{margin:0; padding:0; border:0; color:inherit;}
     ul,ol,li{list-style:none;}
@@ -53,10 +53,19 @@
       #contentBox{width:960px; height:auto; background-color:#eaf;}
         #contentBox>.article_box_01{width:960px; height:300px; background-color:#abf;}
         #contentBox>.article_box_02{width:960px; height:250px; background-color:#acf;}
-        #contentBox>.article_box_03{width:960px; height:1000px; background-color:#adf;}
-        #contentBox>.article_box_04{width:960px; height:250px; background-color:#aef;}
-        #contentBox>.article_box_05{width:960px; height:150px; background-color:#aff;}
 
+        #contentBox>.article_box_03{width:960px; height:1000px;
+        padding:75px 55px; box-sizing:border-box; background-color:#adf;}
+          .article_box_03>ul{width:100%; height:100%;}
+          .article_box_03>ul>li{width:250px; height:250px; float:left; 
+            border:15px solid #adf; background-color:#ff3;}
+          .article_box_03>.more_car_list{width:100%; height:50px; float:left; background-color:#59f;}
+
+        #contentBox>.article_box_04{width:960px; height:250px; background-color:#aef;}
+
+        #contentBox>.article_box_05{width:960px; height:150px; padding:20px; box-sizing:border-box; background-color:#aff;}
+          .article_box_05>ul{width:100%; height:100%;}
+          .article_box_05>ul>li{width:210px; height:100px; float:left; border:10px solid #aff; background-color:#ddf;}
 
 /*  #footBox_________________________________ */
       #footBox{width:960px; height:150px; padding:25px; box-sizing:border-box; background-color:#eaa;}
@@ -69,12 +78,11 @@
         #footBox>div>ul{width:100%; height:100%;}
         #footBox>div>ul>li{width:38px; height:40px; float:left; border:1px solid #fcc; background-color:#fee;}
         #footBox>div>ul>li.last_list{width:79px; height:40px; float:left; background-color:#fee;}
-
   </style>
 </head>
 <body>
   <div id="wrap">
-<!-- // #headBox __________-->
+<!--  #headBox __________-->
     <header id="headBox" class="clearfix">
       <h1>logo</h1>
       <nav id="gnb">
@@ -94,7 +102,7 @@
       </nav>
     </header><!-- // #headBox -->
 
-<!-- // #contentBox __________-->
+<!--  #contentBox __________-->
     <div id="contentBox">
       <h2 class="hidden">중고차찾기</h2>
 
@@ -106,20 +114,38 @@
         <h3>kb차차차 중고차 검색</h3>
       </article>
 
-      <article class="article_box_03">
-        <h3>차 둘러보기 list</h3>
+      <article class="article_box_03 clearfix">
+        <h3 class="hidden">차 둘러보기 list</h3>
+        <ul>
+          <li>car_list01</li>
+          <li>car_list02</li>
+          <li>car_list03</li>
+          <li>car_list04</li>
+          <li>car_list05</li>
+          <li>car_list06</li>
+          <li>car_list07</li>
+          <li>car_list08</li>
+          <li>car_list09</li>
+        </ul>
+        <div class="more_car_list">더보기</div>
       </article>
 
       <article class="article_box_04">
         <h3>국민시세</h3>
       </article>
 
-      <article class="article_box_05">
-        <h3>추가정보</h3>
+      <article class="article_box_05 clearfix">
+        <h3 class="hidden">추가정보</h3>
+        <ul>
+          <li>대표전화</li>
+          <li>거래가이드</li>
+          <li>서비스신청</li>
+          <li>App설치</li>
+        </ul>
       </article>
     </div><!-- // #contentBox -->
 
-<!-- // #footBox __________-->
+<!--  #footBox __________-->
     <footer id="footBox" class="hidden">
       <h2 class="hidden">title2</h2>
       <nav>이용약관 </nav>
