@@ -28,8 +28,17 @@
 
 /* design ______________________________________________*/
     #wrap{width:700px; height:745px; margin:0 auto;background-color:#eee;}
-      #headBox{width:700px; height:80px; background-color:#aaa;}
+      #headBox{width:700px; height:80px; background-color:#aaa;
+        padding:15px 20px; box-sizing:border-box;}
+        #headBox>h1{width:100px; height:50px; float:left; background-color:#aae;}
+
+        #headBox>nav{width:450px; height:50px; float:left; margin-left:100px; padding:5px 15px; box-sizing:border-box; background-color:#fff;}
+        #headBox>nav>div{width:100px; height:30px; float:left; background-color:#9ae; border:2px solid #fff;}
+
       #contentBox{width:700px; height:585px; background-color:#eee;}
+        #banner{width:700px; height:250px; float:left; background-color:#aee;}
+        #aside{width:700px; height:35px; float:left; background-color:#562;}
+
       #footBox{width:700px; height:80px; background-color:#aaa;}
   </style>
 </head>
@@ -37,10 +46,21 @@
   <div id="wrap">
 
 <!-- // #headBox________________________________ -->
-    <header id="headBox"></header><!-- // #headBox -->
+    <header id="headBox" class="clearfix">
+      <h1>logo</h1>
+      <nav id="gnb">
+          <div>navi_01</div>
+          <div>navi_02</div>
+          <div>navi_03</div>
+          <div>navi_04</div>
+      </nav>
+    </header><!-- // #headBox -->
 
 <!-- // #contentBox________________________________ -->
-    <div id="contentBox"></div><!-- // #contentBox -->
+    <div id="contentBox">
+      <section id="banner">banner</section>
+      <article id="aside">aside</article>
+    </div><!-- // #contentBox -->
 
 <!-- // #footBox________________________________ -->
     <footer id="footBox"></footer><!-- // #footBox -->
