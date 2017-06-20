@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- cc:ie6 조건부 주석 -->
+  <!--[if lte IE 9]>
+  <script></script>    
+  <![endif]-->
+  <style>
+/* reset.css __________________________________________ */
+    html,body{width:100%; height:100%;}
+    html,body,h1,h2,h3,h4,h5,h6,
+    ul,ol,li,dl,dt,dd,
+    p,div,pre,form,fieldset,hr{margin:0; padding:0;}
+    
+    ul,ol,li{list-style:none;}
+
+
+/* html5.reset __________________________________________ */
+    header,nav,aside,article,section,footer,main,figure{display:block; margin:0; padding:0;}
+
+/* normalize.css________________________________________ */
+    .clearfix:after{conrent:" "; display:block; width:0; height:0; clear:both;}
+    .hidden{display:block; width:0; height:0; overflow:hidden;}
+    #wrap .first_li{margin-left:0;}
+
+/* design ______________________________________________ */
+  #wrap{width:960px; height:1340px; margin:0 auto; background-color:#eee;}
+    #headBox{width:960px; height:60px; padding:10px; box-sizing:border-box; background-color:#ffa;}
+      #headBox>h1{width:150px; height:40px; background-color:#f4a;}
+    
+    #contentBox{width:960px; height:1200px; background-color:#8ff;}
+      #aside{width:250px; height:1200px; float:left; background-color:#8ef; padding:100px 75px; box-sizing:border-box;}
+        #aside>h3{width:100px; height:250px; margin-bottom:250px; background-color:#9ae;}
+        #aside>div{width:100px; height:500px; background-color:#9ae;}
+
+      #articleBox{width:710px; height:1200px; float:left; background-color:#af0; padding:100px 20px; box-sizing:border-box;}
+        #articleBox>ul{width:100%; height:100%;}
+        #articleBox>ul>li{width:670px; height:250px; border:1px solid #af0; background-color:#9ae;}
+ 
+    #footBox{width:960px; height:80px; padding:20px 60px; box-sizing:border-box; background-color:#7fa;}
+      #footBox>h2{width:150px; height:40px; float:left; margin-right:10px; background-color:#00a;}
+      #footBox>address{width:500px; height:40px; float:left; margin-left:150px ;background-color:#68e;}
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+<!-- // #headBox________________________________ -->
+    <header id="headBox">
+      <h1 class="hidden">logo</h1>
+    </header><!-- // #headBox -->
+
+<!-- // #contentBox________________________________ -->
+    <div id="contentBox">
+      <h2 class="hidden">contentBox</h2>
+      <article id="aside">
+        <h3>aside_h3</h3>
+        <div>aside_content</div>
+      </article>
+
+      <article id="articleBox">
+        <h3 class="hidden">articleBox</h3>
+        <ul>
+          <li>list_01</li>
+          <li>list_02</li>
+          <li>list_03</li>
+          <li>list_04</li>
+        </ul>
+      </article>
+    </div><!-- // #contentBox -->
+
+<!-- // #footBox________________________________ -->
+    <footer id="footBox" class="clearfix">
+      <h2>footBox</h2>
+      <address>assress</address>
+    </footer><!-- // #footBox -->
+  </div><!-- // #wrap -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
