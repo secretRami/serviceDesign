@@ -17,8 +17,6 @@
   ul,ol,li{list-style:none;}
   table,thead,tbody,tfoot{border:1px solid #333; border-spacing:0; border-collapse:0;}
 
-
-
   /* html5reset.css_______________________________ */
   header,section,article,footer,nav,aside,main,figure{display:block; margin:0; padding:0;}
 
@@ -26,6 +24,7 @@
   .clearfix:after{content:" "; display:block; width:0; height:0; clear:both;}
   .hidden{display:block; width:0; height:0; overflow:hidden;}
   #wrap .last_li{margin-left:0;}
+
 
 /* Design_______________________________ */
     #wrap{width:978px; height:auto; margin:0 auto; background-color:#eee;}
@@ -108,14 +107,16 @@
       #footBox{width:978px; height:150px; padding: 25px 110px; box-sizing:border-box; background-color:#ee3;}
       #footBox>h2{width:100px; height:100px; float:left;background-color:#ecc;}
       #footBox>#fnb{width:600px; height:100px; margin-left:40px; float:left; background-color:#eaa;}
+
   </style>
 </head>
 <body>
   <div id="wrap">
 <!-- #headBox __________________________________  -->
     <header id="headBox">
-      <h1>title</h1>
+      <h1>title1</h1>
       <nav id="gnb">
+      <h2 class="hidden">title2_gnb</h2>
         <ul>
           <li>01</li>
           <li>02</li>
@@ -124,6 +125,7 @@
         </ul>
       </nav>
       <nav id="unb">
+      <h2 class="hidden">title2_unb</h2>
         <ul>
           <li class="unb_list_01">01</li>
           <li class="unb_list_02">02</li>
@@ -132,14 +134,13 @@
     </header><!-- // #headBox -->
 <!-- #contentBox __________________________________  -->
     <div id="contentBox">
-      <h2 class="hidden">title</h2>
+      <h2 class="hidden">title2_contentBox</h2>
 
     <!-- article01 _____________-->
       <article class="article01">
-        <h3 class="hidden">title3</h3>
+        <h2 class="hidden">title2_article01</h2>
           <div class="div_01"></div>
           <div class="div_02"></div>
-
         <div class="article01_02">
           <ul>
             <li></li>
@@ -153,8 +154,9 @@
 
     <!-- article02 _____________-->
       <article class="article02">
-        <h3 class="hidden">title3</h3>
+        <h2 class="hidden">title2_article02</h2>
         <aside id="article02_aside">
+          <h3 class="hidden">title3_article02_aside</h3>
           <div></div>
         </aside>
         <div class="article02_list">
@@ -172,12 +174,13 @@
           <div></div>
           <div></div>
         </div>
-      </article><!-- // .article00 -->
+      </article><!-- // .article02 -->
 
     <!-- article03 _____________-->
       <article class="article03">
-        <h3 class="hidden">title3</h3>
+        <h2 class="hidden">title2_article03</h2>
         <aside>
+          <h3 class="hidden">title3_article03_aside</h3>
           <div class="aside_div"></div>
           <div class="aside_div">
             <div class="minibox"></div>
@@ -204,8 +207,9 @@
 
     <!-- article04 _____________-->
       <article class="article04">
-        <h3 class="hidden">title3</h3>
+        <h2 class="hidden">title2_article04</h2>
         <article>
+          <h3 class="hidden">title3_article04</h3>
           <div class="article04_first_01"></div>
           <div class="article04_first_02"></div>
           <div class="article04_first_03"></div>
@@ -239,25 +243,11 @@
 
 <!-- #footBox __________________________________  -->
     <footer id="footBox">
-      <h2>title</h2>
-      <nav id="fnb"></nav>
+      <h2>title2_footBox</h2>
+      <nav id="fnb">
+        <h3>title2_fnb</h3>
+      </nav>
     </footer><!-- // #footBox -->
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
