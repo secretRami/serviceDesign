@@ -51,22 +51,31 @@
 
 /*  #contentBox_________________________________ */
       #contentBox{width:960px; height:auto; background-color:#eaf;}
-        #contentBox>.article_box_01{width:960px; height:300px; background-color:#abf;}
-        #contentBox>.article_box_02{width:960px; height:250px; background-color:#acf;}
 
+      /* article_box_01_____________________________*/
+        #contentBox>.article_box_01{width:960px; height:300px; padding: 20px; box-sizing:border-box; background-color:#abf;}
+        .article_box_01>h3{width:300px; height:250px; float:right; background-color:#eea;}
+      /* article_box_02_____________________________*/
+        #contentBox>.article_box_02{width:960px; height:250px;  background-color:#acf;}
+          .article_box_02>h3{width:200px; height:50px; margin:0 auto; background-color:#faa;}
+          .article_box_02>.article_box_02_list{width:960px; height:150px; padding:20px 10px ; box-sizing:border-box; background-color:#aaa;}
+            .article_box_02_list>ul{width:100%; height:100%;}
+            .article_box_02_list>ul>li{width:300px; height:100px; border:5px solid #aaa; float:left; background-color:#acf;}
+          .article_box_02>.article_box_02_buttom{width:150px; height:50px; margin:0 auto; background-color:#aaf;}  
+      /* article_box_03_____________________________*/
         #contentBox>.article_box_03{width:960px; height:1000px;
         padding:75px 55px; box-sizing:border-box; background-color:#adf;}
           .article_box_03>ul{width:100%; height:100%;}
           .article_box_03>ul>li{width:250px; height:250px; float:left; 
             border:15px solid #adf; background-color:#ff3;}
           .article_box_03>.more_car_list{width:100%; height:50px; float:left; background-color:#59f;}
-
-        #contentBox>.article_box_04{width:960px; height:250px; background-color:#aef;}
-
+      /* article_box_04_____________________________*/
+        #contentBox>.article_box_04{width:960px; height:250px; padding:20px; box-sizing:border-box; background-color:#aef;}
+        .article_box_04>h3{width:300px; height:200px; float:right; background-color:#eea;}
+      /* article_box_05_____________________________*/
         #contentBox>.article_box_05{width:960px; height:150px; padding:20px; box-sizing:border-box; background-color:#aff;}
           .article_box_05>ul{width:100%; height:100%;}
           .article_box_05>ul>li{width:210px; height:100px; float:left; border:10px solid #aff; background-color:#ddf;}
-
 /*  #footBox_________________________________ */
       #footBox{width:960px; height:150px; padding:25px; box-sizing:border-box; background-color:#eaa;}
         /* nav__________________________ */
@@ -86,6 +95,7 @@
     <header id="headBox" class="clearfix">
       <h1>logo</h1>
       <nav id="gnb">
+        <h2 class="hidden">headBox_in_gnb</h2>
         <ul>
           <li>01</li>
           <li>02</li>
@@ -94,6 +104,7 @@
         </ul>
       </nav>
       <nav id="unb">
+        <h2 class="hidden">headBox_in_unb</h2>
         <ul>
           <li>01</li>
           <li>02</li>
@@ -104,16 +115,24 @@
 
 <!--  #contentBox __________-->
     <div id="contentBox">
-      <h2 class="hidden">중고차찾기</h2>
-
-      <article class="article_box_01">
+      <h2 class="hidden">contentBox_in_title2</h2>
+    <!-- article_box_01 __________________________ -->
+      <article class="article_box_01 clearfix">
         <h3>차차차 중고차 시세</h3>
       </article>
-
+    <!-- article_box_02 __________________________ -->
       <article class="article_box_02">
         <h3>kb차차차 중고차 검색</h3>
+        <div class="article_box_02_list clearfix">
+          <ul>
+            <li>제조사</li>
+            <li>요일</li>
+            <li>세부모델</li>
+          </ul>
+        </div>
+        <div class="article_box_02_buttom">검색하기</div>
       </article>
-
+    <!-- article_box_03 __________________________ -->
       <article class="article_box_03 clearfix">
         <h3 class="hidden">차 둘러보기 list</h3>
         <ul>
@@ -129,11 +148,11 @@
         </ul>
         <div class="more_car_list">더보기</div>
       </article>
-
+    <!-- article_box_04 __________________________ -->
       <article class="article_box_04">
         <h3>국민시세</h3>
       </article>
-
+    <!-- article_box_05 __________________________ -->
       <article class="article_box_05 clearfix">
         <h3 class="hidden">추가정보</h3>
         <ul>
@@ -147,8 +166,10 @@
 
 <!--  #footBox __________-->
     <footer id="footBox" class="hidden">
-      <h2 class="hidden">title2</h2>
-      <nav>이용약관 </nav>
+      <h2 class="hidden">footBox_in_title2</h2>
+      <nav>
+        <h3>이용약관</h3>
+      </nav>
       <address>회사소개</address>
       <div>
         <ul>
