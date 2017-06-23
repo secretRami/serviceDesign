@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* ! position_01.css */
+body{width: 100%; height: 3000px; background-color: rgba(200, 10, 50, 0.1);}
+
+  #wrap{width:700px; height:500px; background-color:#ccc; margin:100px auto; box-shadow:0.2em 0.2em 0.5em #333;}
+     
+     h1{width:100%; height:auto; color:#fff; background-color:#09f; margin-bottom:50px;
+        text-align:center; padding:10px; box-sizing:border-box;}
+
+     .position{width:80%; height:300px; background-color:#f9c; margin:0 auto;}
+     
+     .position>div{width: 90px; height:90px; float:left; font-size:1.3em; 
+        text-align:center; line-height: 70px; color:#fff; 
+        text-shadow:0.1em 0.1em 0.1em #171717;}
+ 
+       .none{background-color: #9af;}/* 비교용. 아무것도 안함*/
+       .static{background-color: #5bc;}
+       #wrap .fixed{width:220px; height:120px; background-color: #333;}
+       .relative{background-color: #1d9;}
+       .absolute{background-color: #0e7;}
+       .box{background-color: #9f5;}/* 비교용. 아무것도 안함*/
+
+/*____________________________________________________________*/
+/* line-height, text-align: 좌우,위아래 정렬시킬 때 */
+
+
+      .static{position:static; z-index:-100; top:500px;}
+      /* static아무런 기능을 하지 않는다. */
+      .fixed{position:fixed; top:0; right:50%;}
+      /* 위치값을 주지 않으면 부모의 시작 위치로 간다. 
+
+        * 박스의 모서리를 기준으로 잡고 위치한다. 
+          ex/ fixed{right:50%}이라면, 박스의 right쪽 모서리가 50%의 자리에 위치한다;
+        * ex/ fixed{right:50% left:25%;}이런 식으로 둘 다 적용시키면 둘 중 하나만 적용된다. 
+        * fixed를 이용해 정 중앙에 놓고싶다면, top:50%, left:50%로 놓고, 모서리가 브라우저의 정 중앙에 위치하면, 
+          박스 크기의 절반씩을 margin으로 마이너스정렬시킨다.
+          ex// margin-top:-박스의 절반크기; margin-lft:-50%;의 값을 각가 적어준다.  
+      */
+      .relative{}
+      .absolute{}
