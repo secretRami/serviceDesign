@@ -12,7 +12,7 @@
     {margin:0; padding:0; border:0; 
       font-size:100%; color:inherit;}
     h1, h2, h3, h4, h5, h6{margin:0; padding:0; border:0; color:inherit;}
-
+    
     /* list 불릿 기호 제거 */
     ol, ul, li{list-style:none;}
     
@@ -44,17 +44,19 @@
 /* design_______________________________________  */
     #wrap{width:960px; height:3000px; margin:0 auto; padding:40px; box-sizing:border-box; background-color:#aaa;}
       
-      form{width:300px; height:250px; margin:0 auto; background-color:#fcf;}
-        form>fieldset{border:0; margin:0; padding:0;}
-        #wrap legend{width:300px; height:40px; margin:0; padding: 10px; box-sizing:border-box; background-color:#eee;}
+      form{width:300px; height:350px; margin:0 auto; background-color:#fcf;}
+        
+        form>fieldset{width:300px; height:350px; border:0; margin:0; padding:0;}
+        legend{width:300px; height:40px; margin:0; padding: 10px; box-sizing:border-box; background-color:#eee;}
+        
+      
+        #userName, #inputPwd{width:200px; height:30px; margin:10px auto; border: 1px solid #fff;}
+        label{width:200px; height:20px; margin:10px auto;}
 
-
-          .log_in{width:200px; height:30px; margin:10px auto; 
-                  background-color:#fff;}
-          .user{}
-          .pwd{}
-          .remember_checkbox{margin-left:50px;}
-          .login_button{ padding:3px 70px; box-sizing:border-box;  background-color:#eee;}
+          .log_in{width:200px; height:auto; margin:10px auto;} 
+          
+          .remember_checkbox{margin-left:50px; margin-bottom: 10px;}
+          .login_button{width:200px; height:30px; padding:3px 70px; margin: 0 auto; box-sizing:border-box;  background-color:#eee; font-size: 1.2em;}
       
   </style>
 </head>
@@ -66,13 +68,13 @@
         <legend >Login</legend>
 <!-- user_________________________________________________________ -->
         <div class="user log_in">
-          <label class="hidden" for="userName">사용자명</label>
-          <input type="text" id="userName" name="userName" value="" placeholder="사용자명"/>
+          <label for="userName">사용자명</label>
+          <input type="text" id="userName" name="userName" value="" placeholder=""/>
         </div><!-- // .user -->
 <!-- pwd_________________________________________________________ -->
         <div class="pwd log_in">
-          <label class="hidden" for="inputPwd">비밀번호</label>
-          <input type="password" id="inputPwd" name="inputPwd" value="" placeholder="비밀번호" />
+          <label for="inputPwd">비밀번호</label>
+          <input type="password" id="inputPwd" name="inputPwd" value="" placeholder" />
         </div><!-- // .pwd -->
 <!-- remember_checkbox_________________________________________________________ -->
         <div class="remember_checkbox">
@@ -80,7 +82,7 @@
         <label for="remember">기억하기</label>
         </div><!-- // .remember_checkbox -->
 <!-- login_button_________________________________________________________ -->
-        <div class="login_button log_in">
+        <div class="login_button">
           <button type="submit">로그인</button>
         </div>
       </fieldset>
