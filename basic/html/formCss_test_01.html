@@ -24,7 +24,12 @@
       border: 1px solid #333; border-spacing:0; border-collapse:collapse;}
     
     /* 버튼 태그 링크모양처리, 배경색상, 테두리 변경 */
-    button, input[type="submit"], input[type="text"], input[type="reset"], 
+    input[type="text"], input[type="password"], input[type="email"], 
+    input[type="tel"], input[type="search"]{
+      text-indent:5px;/* IE하위버전용 */ text-indent:0.3em;/* 다른 브라우저용 */
+    }
+
+    button, input[type="submit"], input[type="password"], input[type="text"], input[type="reset"], 
     input[type="button"]{
       cursor:pointer; background-color:transparent; border:0;}
     
@@ -32,28 +37,25 @@
     header, nav, aside, article, section, footer, main, figure{
       display:block; margin:0; padding:0; border:0; font-size: 100%; color:inherit;}
     
-    /* form reset */
-    input[type="text"], input[type="password"], input[type="email"] 
-    input[type="tel"], input[type="search"]{
-      text-indent:5px;/* IE하위버전용 */ text-indent:0.3em;/* 다른 브라우저용 */
-    }
-
     /* normalize.css */
     .clearfix:after, .cf:after{content:" "; display:block; width:0; height:0; clear:both;}
     .hidden{display:block; width:0; height:0; overflow:hidden;}
 
 /* design_______________________________________  */
     #wrap{width:960px; height:3000px; margin:0 auto; padding:40px; box-sizing:border-box; background-color:#aaa;}
-      form{width:300px; height:250px; margin:0 auto; background-color:#fff;}
-      form>fieldset{border:0; margin:0; padding:0;}
-      #wrap legend{width:300px; height:40px; margin:0; padding: 10px; box-sizing:border-box; background-color:#8ee;}
+      
+      form{width:300px; height:250px; margin:0 auto; background-color:#fcf;}
+        form>fieldset{border:0; margin:0; padding:0;}
+        #wrap legend{width:300px; height:40px; margin:0; padding: 10px; box-sizing:border-box; background-color:#eee;}
 
-        .log_in{width:200px; height:30px; margin:10px auto;}
-        .user{background-color:#fff; border-bottom:1px solid #ddd;}
-        .pwd{background-color:#fff; margin-bottom: 10px; border-bottom:1px solid #ddd;}
-        .remember_checkbox{margin-left:40px;}
-        .login_button{ width:50px; height:30px; margin-right:40px; padding:3px; box-sizing:border-box;  background-color:#afe;}
-    
+
+          .log_in{width:200px; height:30px; margin:10px auto; 
+                  background-color:#fff;}
+          .user{}
+          .pwd{}
+          .remember_checkbox{margin-left:50px;}
+          .login_button{ padding:3px 70px; box-sizing:border-box;  background-color:#eee;}
+      
   </style>
 </head>
 <body>
@@ -70,7 +72,7 @@
 <!-- pwd_________________________________________________________ -->
         <div class="pwd log_in">
           <label class="hidden" for="inputPwd">비밀번호</label>
-          <input type="text" id="inputPwd" name="inputPwd" value="" placeholder="비밀번호" />
+          <input type="password" id="inputPwd" name="inputPwd" value="" placeholder="비밀번호" />
         </div><!-- // .pwd -->
 <!-- remember_checkbox_________________________________________________________ -->
         <div class="remember_checkbox">
