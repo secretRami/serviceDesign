@@ -46,9 +46,10 @@
     #wrap{width:960px; height:3000px; margin:0 auto; padding:40px; box-sizing:border-box; background-color:#aaa;}
       form{width:300px; height:250px; margin:0 auto; padding:40px; box-sizing:border-box; background-color:#fff;}
       form>fieldset{border:0;}
-        .log_in{width:200px; height:30px; margin-bottom:20px;}
-        .user{background-color:#eee;}
-        .pwd{background-color:#eee;}
+        .log_in{width:200px; height:30px;}
+        .user{background-color:#eee; border:1px solid #ddd;}
+        .pwd{background-color:#eee; margin-bottom: 10px; border:1px solid #ddd; border-top:0;}
+        .remember_checkbox{margin-bottom:10px;}
         .login_button{background-color:#afe;}
     
   </style>
@@ -58,11 +59,11 @@
     <form action="#" method="post">
       <fieldset>
 
-        <legend class="hidden">formCss_test</legend>
+        <legend >Please Login</legend>
 <!-- user_________________________________________________________ -->
         <div class="user log_in">
           <label class="hidden" for="userName">사용자명</label>
-          <input type="text" id="userName" name="userName" value="" placeholder="사용자명" />
+          <input type="text" id="userName" name="userName" value="" />
         </div><!-- // .user -->
 <!-- pwd_________________________________________________________ -->
         <div class="pwd log_in">
@@ -70,7 +71,7 @@
           <input type="text" id="inputPwd" name="inputPwd" value="" placeholder="비밀번호" />
         </div><!-- // .pwd -->
 <!-- remember_checkbox_________________________________________________________ -->
-        <div class="remember_checkbox hidden">
+        <div class="remember_checkbox">
         <input type="checkbox" id="remember" name="remember" value="기억하기" checked="" />
         <label for="remember">기억하기</label>
         </div><!-- // .remember_checkbox -->
