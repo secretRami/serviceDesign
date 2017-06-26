@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+  /* reset_css____________________________________________________*/
+    html,body{width:100%; height:100%; color:#333; font-family:sans-serif;}
+    html, body, div, p , pre,
+    table, thead, tbody, tfoot, ul, ol, li, dl, dt, dd
+    {margin:0; padding:0; border:0; 
+      font-size:100%; color:inherit;}
+    h1, h2, h3, h4, h5, h6{margin:0; padding:0; border:0; color:inherit;}
+
+    /* list 불릿 기호 제거 */
+    ol, ul, li{list-style:none;}
+    
+    /* 링크코드 밑줄 및 글씨색 변경 */
+    a{text-decoration:none;}
+    
+    /* table초기세팅 */
+    table, thead, tbody, tfoot, tr, td, th{
+      border: 1px solid #333; border-spacing:0; border-collapse:collapse;}
+    
+    /* html5 reset */
+    header, nav, aside, article, section, footer, main, figure{
+      display:block; margin:0; padding:0; border:0; font-size: 100%; color:inherit;}
+    
+    /* form reset */
+    input[type="text"], input[type="password"], input[type="email"] 
+    input[type="tel"], input[type="search"]{
+      text-indent:5px;/* IE하위버전용 */ text-indent:0.3em;/* 다른 브라우저용 */
+    }
+
+    /* normalize.css */
+    .clearfix:after, .cf:after{content:" "; display:block; width:0; height:0; clear:both;}
+    .hidden{display:block; width:0; height:0; overflow:hidden;}
+
+/* design_______________________________________  */
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <form action="#" method="post">
+      <fieldset>
+
+        <legend class="hidden">formCss_test</legend>
+<!-- user_________________________________________________________ -->
+        <div class="user">
+          <label for="userName">사용자명</label>
+          <input type="text" id="userName" name="userName" value="" placeholder="사용자명" />
+        </div><!-- // .user -->
+<!-- pwd_________________________________________________________ -->
+        <div class="pwd">
+          <label for="inputPwd">비밀번호</label>
+          <input type="text" id="inputPwd" name="inputPwd" value="" placeholder="비밀번호" />
+        </div><!-- // .pwd -->
+<!-- remember_checkbox_________________________________________________________ -->
+        <div class="remember_checkbox">
+        <input type="checkbox" id="remember" name="remember" value="기억하기" checked="" />
+        <label for="remember">기억하기</label>
+        </div><!-- // .remember_checkbox -->
+<!-- login_button_________________________________________________________ -->
+        <div class="login_button">
+          <button type="submit">로그인</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  
+</body>
+</html>
