@@ -1,0 +1,31 @@
+/* test.scss */ 
+
+//이것도 주석이다.
+// 한 줄 주석은 css로 변환되지 않는다. 
+
+
+/* 
+scss폴더를 만든 뒤에 css와 연경하기 위해 터미널에서 명령어를 입력한다.
+`node-sass -o css/src scss/test.scss`를 치면, 
+`node-sass`node-sass실행 `-o`옵션 아웃풋시킨다. `css/src`로 옮길거야 `scss/test.scss`이것을. 
+*/
+
+/*
+
+`--output-style compact` 옵션을 치면, 객체 하나 하나의 설정값을 한 줄로 만들어준다. 
+`--output-style compressed` 옵션을 치면, 사람이 보기 힘들게 꾹꾹 눌러서 배표용으로 만들어준다.  
+`--output-style nested` 옵션을 치면, 걍 우리가 아는 그대로의 코드가 된다. 
+*/
+
+/*
+`--output-style compact -w` 옵션을 치면, 무언가 변화가 일어나면 알아서 자동으로 변환시켜준다. 
+*/
+
+$test : #aa6;
+
+body{background-color:#acd;
+  margin:0;
+  padding:0;}
+  h1{padding:1em;
+    color:#fff;
+    background-color:$test;}
