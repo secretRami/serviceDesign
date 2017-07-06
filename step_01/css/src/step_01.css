@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* step_01.scss */
+#wrap { width: 100%; min-width: 960px; height: auto; min-height: 1000px; margin: 0 auto; }
+
+#headBox { width: 100%; height: 200px; background-color: #ffddeb; }
+
+#headBox > h1 { color: #fac; }
+
+#headBox > h1:hover { color: daken(#fac, 50%); }
+
+#adBox { width: 100%; height: 450px; background-color: rgba(89, 118, 30, 0.5); }
+
+#adBox h2 { width: 100%; height: auto; background-color: #ffd; }
+
+#adBox h2:hover { color: #aa0044; }
+
+/* 네스팅 기법을 사용해 hover를 사용해보았다. 
+하지만, 너무 많아지면 알아보기 어려우니 무조건 꼬리표를 달고, 4개이상은 사용하지 않도록 하자! 
+*/
+#contentBox { width: 100%; height: 500px; background-color: #ff1170; }
+
+#footBox { width: 100%; height: 50px; background-color: #dd0058; }
+
+/*
+변수값으로 컬러를 지정해줄 때, %로 값을 지정해주면 기본의 변수색보다 조금씩, 어둡게, 밝게 설정해줄 수 있다. 
+{darken(변수명), 10%}
+{lighten(변수명), 10%}
+*/
+/* scss는 숨김 파일로 설정할 때 `_`를 맨 앞에 붙여서 사용한다. 
+숨김폴더가 되면 css로 변환되지 않아서 불필요한 파일이 컴파일되지 않는다.  
+가능하면 숨김폴더 안의 파일들도 `_`를 붙여서 안전하게 처리하자! */
