@@ -14,6 +14,12 @@ scss폴더를 만든 뒤에 css와 연경하기 위해 터미널에서 명령어
 /*
 `--output-style compact -w` 옵션을 치면, 무언가 변화가 일어나면 알아서 자동으로 변환시켜준다. 
 */
-body { background-color: #acd; margin: 0; padding: 0; }
+body {
+  background-color: #acd;
+  margin: 0;
+  padding: 0; }
 
-h1 { padding: 1em; color: #fff; background-color: #aa6; }
+h1 {
+  padding: 1em;
+  color: #fff;
+  background-color: #aa6; }

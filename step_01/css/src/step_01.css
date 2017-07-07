@@ -1,25 +1,44 @@
 @charset "UTF-8";
 /* step_01.scss의 베이스 파일*/
-#wrap { width: 100%; min-width: 960px; height: auto; min-height: 1000px; margin: 0 auto; }
+#wrap {
+  width: 100%;
+  min-width: 960px;
+  height: auto;
+  min-height: 1000px;
+  margin: 0 auto; }
 
-#headBox { width: 100%; height: 200px; background-color: #d7e3f4; }
+#headBox {
+  width: 100%;
+  height: 200px;
+  background-color: #d7e3f4; }
+  #headBox > h1 {
+    color: #8ad; }
+  #headBox > h1:hover {
+    color: black; }
 
-#headBox > h1 { color: #8ad; }
-
-#headBox > h1:hover { color: black; }
-
-#adBox { width: 100%; height: 450px; background-color: rgba(89, 118, 30, 0.5); }
-
-#adBox h2 { width: 100%; height: auto; color: #ffd; }
-
-#adBox h2:hover { color: black; }
+#adBox {
+  width: 100%;
+  height: 450px;
+  background-color: rgba(89, 118, 30, 0.5); }
+  #adBox h2 {
+    width: 100%;
+    height: auto;
+    color: #ffd; }
+    #adBox h2:hover {
+      color: black; }
 
 /* 네스팅 기법을 사용해 hover를 사용해보았다. 
 하지만, 너무 많아지면 알아보기 어려우니 무조건 꼬리표를 달고, 4개이상은 사용하지 않도록 하자! 
 */
-#contentBox { width: 100%; height: 500px; background-color: #2d5b9f; }
+#contentBox {
+  width: 100%;
+  height: 500px;
+  background-color: #2d5b9f; }
 
-#footBox { width: 100%; height: 50px; background-color: #224477; }
+#footBox {
+  width: 100%;
+  height: 50px;
+  background-color: #224477; }
 
 /*
 변수값으로 컬러를 지정해줄 때, %로 값을 지정해주면 기본의 변수색보다 조금씩, 어둡게, 밝게 설정해줄 수 있다. 
