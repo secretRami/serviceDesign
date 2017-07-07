@@ -13,8 +13,11 @@
 }
 
 // 4 @mixin test3 - 값 변경
-@mixin place(){
-  
+
+@mixin change($time:1s, $color:#afe, $font:#111){
+  & >a{transition:all #{$time} ease-out;} 
+  // #{$time} : inter....뭐시기는 내가 지정한 값을 적용시키지 못할 때, 강제로 적용시켜주는 방법이다. 
+  &:hover>a{background-color:$color; color:$font; font-size:1em;}
 }
 
 
@@ -30,7 +33,13 @@
         @include border;
         @include link;
         &:first-child{margin-left:0;}
-      }// #gnb li
+        }// #gnb li
+      >li:nth-child(1){@include change();}// 아무것도 쓰지 않아도 기본값이 설정되어있으면 알아서 기본값이 적용된다. 
+      >li:nth-child(2){@include change($font:#ddd);}//둘 중 하나의 값만 다른걸로 적용시키고 싶으면, $인자:값을 적어서 적용시킨다. 
+      >li:nth-child(3){@include change(#ccc, #78f);}
+      >li:nth-child(4){@include change(#bbb, #abf);} 
+      >li:nth-child(5){@include change(#aaa, #def);}
+
     }// #gnb>ul
   }// #gnb
 }// #wrap

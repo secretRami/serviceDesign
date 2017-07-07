@@ -1,0 +1,8 @@
+// step_02_mixin.scss
+// scss class(html에서 불리는 클래스와는 다른 의미이다!)
+
+
+@mixin baseLayout($w:100%, $h:auto, $c:$primary){
+  width:$w; height:$h; background-color:$c;  
+}
+
