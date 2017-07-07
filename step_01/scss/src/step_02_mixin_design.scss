@@ -8,11 +8,11 @@
 
 
 // test-------------------------------------------------------------
+$url:"../../img/";
 
-
-@mixin link($u:"../../img/sujin/charactor_02.jpg", $p:center, $t:700ms){
+@mixin link($u:$url, $f:none, $p:center, $t:700ms){
   a{width:100%; height:100%; display:block;
-    background-image:url($u);
+    background-image:url($u + $f);
     background-repeat: no-repeat;
     background-position:$p;
     transition:all $t lenear;
@@ -30,7 +30,7 @@
   
   h1{width:150px; height:50px; margin:0 auto;
   
-    @include link();
+    @include link($f:"sujin/charactor_02.jpg");
 
     &:hover{background-size:80%;}
 
