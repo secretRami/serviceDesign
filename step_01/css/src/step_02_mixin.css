@@ -10,4 +10,8 @@
 
 #wrap #gnb > ul > li { height: 100%; float: left; margin-left: 10px; border-bottom: 2px solid #fff; padding-bottom: 5px; }
 
+#wrap #gnb > ul > li:hover { background-color: #0af; }
+
+#wrap #gnb > ul > li > a { width: 100%; height: 100%; display: block; }
+
 #wrap #gnb > ul > li:first-child { margin-left: 0; }
