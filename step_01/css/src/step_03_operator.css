@@ -1,16 +1,26 @@
 /* step_03_operator */
-.box { width: 300px; }
+.box {
+  width: 300px; }
 
-.box2 { width: 300px; }
+.box2 {
+  width: 300px; }
 
-.box2 { width: 350 px; }
+.box2 {
+  width: 350 px; }
 
-.box2 { width: 300px; }
+.box2 {
+  width: 300px; }
 
-.color { color: white; }
+.color {
+  color: white; }
 
-.color { color: #66ffff; }
+.color {
+  color: #66ffff; }
 
-.color { color: magenta; }
+.color {
+  color: magenta; }
 
-.two { width: 33.33333px; height: 43.33333em; font-size: 3rem; }
+.two {
+  width: 33.33333px;
+  height: 43.33333em;
+  font-size: 3rem; }

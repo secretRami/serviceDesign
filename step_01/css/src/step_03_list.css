@@ -1,34 +1,51 @@
 /* step_03_operator */
-li:nth-child(1) { width: 100px; }
+li:nth-child(1) {
+  width: 100px; }
 
-li:nth-child(2) { width: 200px; }
+li:nth-child(2) {
+  width: 200px; }
 
-li:nth-child(3) { width: 150px; }
+li:nth-child(3) {
+  width: 150px; }
 
-li:nth-child(4) { width: 30px; }
+li:nth-child(4) {
+  width: 30px; }
 
-li:nth-child(5) { width: 15px; }
+li:nth-child(5) {
+  width: 15px; }
 
-div { content: 10; }
+div {
+  content: 10; }
 
-div { list: 10; }
+div {
+  list: 10; }
 
-li:nth-child(1) > a { background-image: url("../img/test/aa.png"); }
+li:nth-child(1) > a {
+  background-image: url("../img/test/aa.png"); }
 
-li:nth-child(2) > a { background-image: url("../img/test/gg.png"); }
+li:nth-child(2) > a {
+  background-image: url("../img/test/gg.png"); }
 
-li:nth-child(3) > a { background-image: url("../img/test/bo.png"); }
+li:nth-child(3) > a {
+  background-image: url("../img/test/bo.png"); }
 
-li:nth-child(4) > a { background-image: url("../img/test/r.png"); }
+li:nth-child(4) > a {
+  background-image: url("../img/test/r.png"); }
 
-li:nth-child(5) > a { background-image: url("../img/test/rami.png"); }
+li:nth-child(5) > a {
+  background-image: url("../img/test/rami.png"); }
 
-li:nth-child(6) > a { background-image: url("../img/test/mi.png"); }
+li:nth-child(6) > a {
+  background-image: url("../img/test/mi.png"); }
 
-li:nth-child(7) > a { background-image: url("../img/test/ram.png"); }
+li:nth-child(7) > a {
+  background-image: url("../img/test/ram.png"); }
 
-li:nth-child(8) > a { background-image: url("../img/test/image1.png"); }
+li:nth-child(8) > a {
+  background-image: url("../img/test/image1.png"); }
 
-li:nth-child(9) > a { background-image: url("../img/test/image2.png"); }
+li:nth-child(9) > a {
+  background-image: url("../img/test/image2.png"); }
 
-li:nth-child(10) > a { background-image: url("../img/test/image10.png"); }
+li:nth-child(10) > a {
+  background-image: url("../img/test/image10.png"); }
