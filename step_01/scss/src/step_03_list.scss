@@ -1,0 +1,94 @@
+// scss 
+/* step_03_operator */
+
+
+
+
+// list목록을 간단하게 사용해보자----------------------------------------
+
+// 원래 list에 적용시켜서 쓰던 방법 
+// li:nth-child(1){width:100px;}
+// li:nth-child(2){width:200px;}
+// li:nth-child(3){width:150px;}
+// li:nth-child(4){width:30px;}
+// li:nth-child(5){width:15px;}
+
+// 1. list를 변수로 지정해주고,
+$width:(100, 200, 150, 30, 15);
+ 
+// 2. 사용하는 방법 
+li:nth-child(1){width:nth($width, 1)+px;}
+li:nth-child(2){width:nth($width, 2)+px;}
+li:nth-child(3){width:nth($width, 3)+px;}
+li:nth-child(4){width:nth($width, 4)+px;}
+li:nth-child(5){width:nth($width, 5)+px;}
+
+
+// image를 list로 사용할 때, ----------------------
+
+//원래 사용하던 방법. 
+// $url:"../img/test/";
+// li:nth-child()>a{background-image:url($url+"image1.png");}
+
+// but! 여러개의 파일을 써야하는 경우에! 아래처럼 여러 법 쓰면 귀찮...
+// $url:"../img/test/";
+// li:nth-child(1)>a{background-image:url($url+"aa.png")}
+// li:nth-child(2)>a{background-image:url($url+"gg.png")}
+// li:nth-child(3)>a{background-image:url($url+"bo.png")}
+// li:nth-child(4)>a{background-image:url($url+"r.png")}
+// li:nth-child(5)>a{background-image:url($url+"rami.png")}
+// li:nth-child(6)>a{background-image:url($url+"mi.png")}
+// li:nth-child(7)>a{background-image:url($url+"ram.png")}
+// li:nth-child(8)>a{background-image:url($url+"image1.png")}
+// li:nth-child(9)>a{background-image:url($url+"image2.png")}
+// li:nth-child(10)>a{background-image:url($url+"image10.png")}
+
+
+// 이미지 상세경로
+$url:"../img/test/";
+
+// 이미지 파일명
+$imgFile:("aa.png", "gg.png", "bo.png", "r.png", "rami.png", 
+  "mi.png", "ram.png", "image1.png", "image2.png", "image10.png");
+
+div{content:length($imgFile);}
+div{list:length($imgFile);}//아무 기능을 안함 
+
+// $url, $imgFile을 활용해서 간단하게 경로, 파일명 지정.
+// nth(사용할 변수명, 항목 위치 숫자)
+li:nth-child(1)>a{background-image:url($url + nth($imgFile, 1));}
+li:nth-child(2)>a{background-image:url($url + nth($imgFile, 2));}
+li:nth-child(3)>a{background-image:url($url + nth($imgFile, 3));}
+li:nth-child(4)>a{background-image:url($url + nth($imgFile, 4));}
+li:nth-child(5)>a{background-image:url($url + nth($imgFile, 5));}
+li:nth-child(6)>a{background-image:url($url + nth($imgFile, 6));}
+li:nth-child(7)>a{background-image:url($url + nth($imgFile, 7));}
+li:nth-child(8)>a{background-image:url($url + nth($imgFile, 8));}
+li:nth-child(9)>a{background-image:url($url + nth($imgFile, 9));}
+li:nth-child(10)>a{background-image:url($url + nth($imgFile, 10));}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
