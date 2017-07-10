@@ -1,0 +1,28 @@
+// scss 
+/* step_03_operator */
+
+// + - * /
+
+$width1: 100px; $width2:200px;
+
+.box{width:$width1 + $width2;}
+
+.box2{width:100px + 200px;}
+.box2{width:(150 + 200)px;}
+.box2{width:(100 + 200) + px;}
+
+//----------------------
+
+.color{color:#ddd + #adc;}
+.color{color:#3d3 + #3fc;}
+.color{color:#f00 + #00f;}
+
+//-----------------------
+
+.two{width:(100 / 3)+px;
+  height:(100 + 30) / 3 + em;
+  font-size:(16 * 3 / 16) + rem;}
+
+
+  // 무조건 단위는 하나만 사용힌다.
+  // 감싸주고, 단위값을 +로 더해준다.
